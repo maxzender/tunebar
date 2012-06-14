@@ -1,0 +1,522 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		77212504158A3C9800B3746E /* TBControlOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77212503158A3C9800B3746E /* TBControlOverlayView.m */; };
+		77212508158A45BA00B3746E /* TBProgressBarImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77212507158A45BA00B3746E /* TBProgressBarImageView.m */; };
+		7721250A158A490000B3746E /* progress_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 77212509158A490000B3746E /* progress_bar.png */; };
+		7739C4881588B39300479998 /* artwork_overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 7739C47B1588B39200479998 /* artwork_overlay.png */; };
+		7739C4891588B39300479998 /* control_overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 7739C47C1588B39200479998 /* control_overlay.png */; };
+		7739C48A1588B39300479998 /* next_button_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 7739C47D1588B39200479998 /* next_button_active.png */; };
+		7739C48B1588B39300479998 /* next_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 7739C47E1588B39200479998 /* next_button.png */; };
+		7739C48C1588B39300479998 /* pause_button_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 7739C47F1588B39200479998 /* pause_button_active.png */; };
+		7739C48D1588B39300479998 /* pause_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 7739C4801588B39200479998 /* pause_button.png */; };
+		7739C48E1588B39300479998 /* play_button_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 7739C4811588B39200479998 /* play_button_active.png */; };
+		7739C48F1588B39300479998 /* play_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 7739C4821588B39200479998 /* play_button.png */; };
+		7739C4901588B39300479998 /* preferences_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 7739C4831588B39200479998 /* preferences_button.png */; };
+		7739C4911588B39300479998 /* previous_button_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 7739C4841588B39200479998 /* previous_button_active.png */; };
+		7739C4921588B39300479998 /* previous_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 7739C4851588B39200479998 /* previous_button.png */; };
+		7739C4941588B39300479998 /* window_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 7739C4871588B39300479998 /* window_background.png */; };
+		774C7FD2158362160045FFC5 /* statusicon_default.png in Resources */ = {isa = PBXBuildFile; fileRef = 774C7FD1158362160045FFC5 /* statusicon_default.png */; };
+		774C7FD4158362830045FFC5 /* statusicon_highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 774C7FD3158362830045FFC5 /* statusicon_highlight.png */; };
+		775346D7157F38DD007991E0 /* TBArtworkImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 775346D6157F38DD007991E0 /* TBArtworkImageView.m */; };
+		775346DD157F4609007991E0 /* TBPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 775346DC157F4609007991E0 /* TBPanel.m */; };
+		7754E1E1158149D000A67BD5 /* artwork_default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7754E1E0158149D000A67BD5 /* artwork_default.png */; };
+		777DB786157F724D00D16FDD /* TBiTunesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 777DB785157F724D00D16FDD /* TBiTunesController.m */; };
+		777F3FD015827AA8005FB9FC /* TBProgressBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 777F3FCF15827AA8005FB9FC /* TBProgressBarView.m */; };
+		77856631157E8E42006447A9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77856630157E8E42006447A9 /* Cocoa.framework */; };
+		7785663B157E8E42006447A9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77856639157E8E42006447A9 /* InfoPlist.strings */; };
+		7785663D157E8E42006447A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7785663C157E8E42006447A9 /* main.m */; };
+		77856641157E8E42006447A9 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 7785663F157E8E42006447A9 /* Credits.rtf */; };
+		77856644157E8E42006447A9 /* TBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77856643157E8E42006447A9 /* TBAppDelegate.m */; };
+		77856647157E8E43006447A9 /* Main.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77856645157E8E42006447A9 /* Main.xib */; };
+		7785664E157E8E53006447A9 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7785664D157E8E53006447A9 /* ScriptingBridge.framework */; };
+		77856652157E8FA3006447A9 /* TBPopoverWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77856650157E8FA3006447A9 /* TBPopoverWindowController.m */; };
+		77856653157E8FA3006447A9 /* PopoverWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77856651157E8FA3006447A9 /* PopoverWindow.xib */; };
+		7785665D157E95DA006447A9 /* TBTransparentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7785665C157E95DA006447A9 /* TBTransparentView.m */; };
+		7785667A157E9E8B006447A9 /* TBStatusItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77856679157E9E8B006447A9 /* TBStatusItemView.m */; };
+		77C6CE77157FEB4300B2100D /* TBPreferencesButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C6CE76157FEB4300B2100D /* TBPreferencesButton.m */; };
+		77C93FFB1584D49E00BE1BA1 /* Tunebar.icns in Resources */ = {isa = PBXBuildFile; fileRef = 77C93FFA1584D49E00BE1BA1 /* Tunebar.icns */; };
+		77CE4755158512C200FC63A4 /* TBScrollTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77CE4754158512C200FC63A4 /* TBScrollTextView.m */; };
+		77EEABB015809B3D005C0A9B /* TBPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77EEABAE15809B3D005C0A9B /* TBPreferencesWindowController.m */; };
+		77EEABB115809B3D005C0A9B /* PreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77EEABAF15809B3D005C0A9B /* PreferencesWindow.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		77212502158A3C9800B3746E /* TBControlOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBControlOverlayView.h; sourceTree = "<group>"; };
+		77212503158A3C9800B3746E /* TBControlOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBControlOverlayView.m; sourceTree = "<group>"; };
+		77212506158A45BA00B3746E /* TBProgressBarImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBProgressBarImageView.h; sourceTree = "<group>"; };
+		77212507158A45BA00B3746E /* TBProgressBarImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBProgressBarImageView.m; sourceTree = "<group>"; };
+		77212509158A490000B3746E /* progress_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = progress_bar.png; sourceTree = "<group>"; };
+		7739C47B1588B39200479998 /* artwork_overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = artwork_overlay.png; sourceTree = "<group>"; };
+		7739C47C1588B39200479998 /* control_overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = control_overlay.png; sourceTree = "<group>"; };
+		7739C47D1588B39200479998 /* next_button_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next_button_active.png; sourceTree = "<group>"; };
+		7739C47E1588B39200479998 /* next_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next_button.png; sourceTree = "<group>"; };
+		7739C47F1588B39200479998 /* pause_button_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause_button_active.png; sourceTree = "<group>"; };
+		7739C4801588B39200479998 /* pause_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause_button.png; sourceTree = "<group>"; };
+		7739C4811588B39200479998 /* play_button_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play_button_active.png; sourceTree = "<group>"; };
+		7739C4821588B39200479998 /* play_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play_button.png; sourceTree = "<group>"; };
+		7739C4831588B39200479998 /* preferences_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preferences_button.png; sourceTree = "<group>"; };
+		7739C4841588B39200479998 /* previous_button_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = previous_button_active.png; sourceTree = "<group>"; };
+		7739C4851588B39200479998 /* previous_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = previous_button.png; sourceTree = "<group>"; };
+		7739C4871588B39300479998 /* window_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = window_background.png; sourceTree = "<group>"; };
+		774C7FD1158362160045FFC5 /* statusicon_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = statusicon_default.png; path = ../Tunebar/statusicon_default.png; sourceTree = "<group>"; };
+		774C7FD3158362830045FFC5 /* statusicon_highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = statusicon_highlight.png; path = ../Tunebar/statusicon_highlight.png; sourceTree = "<group>"; };
+		775346D5157F38DD007991E0 /* TBArtworkImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = TBArtworkImageView.h; path = ../Tunebar/TBArtworkImageView.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		775346D6157F38DD007991E0 /* TBArtworkImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = TBArtworkImageView.m; path = ../Tunebar/TBArtworkImageView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		775346DB157F4608007991E0 /* TBPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = TBPanel.h; path = ../Tunebar/TBPanel.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		775346DC157F4609007991E0 /* TBPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = TBPanel.m; path = ../Tunebar/TBPanel.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		7754E1E0158149D000A67BD5 /* artwork_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = artwork_default.png; path = ../Tunebar/artwork_default.png; sourceTree = "<group>"; };
+		777DB782157F6D1300D16FDD /* TBPlayerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = TBPlayerDelegate.h; path = ../Tunebar/TBPlayerDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		777DB784157F724D00D16FDD /* TBiTunesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = TBiTunesController.h; path = ../Tunebar/TBiTunesController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		777DB785157F724D00D16FDD /* TBiTunesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = TBiTunesController.m; path = ../Tunebar/TBiTunesController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		777DB789157F764100D16FDD /* iTunes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iTunes.h; path = ../Tunebar/iTunes.h; sourceTree = "<group>"; };
+		777F3FCE15827AA8005FB9FC /* TBProgressBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = TBProgressBarView.h; path = ../Tunebar/TBProgressBarView.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		777F3FCF15827AA8005FB9FC /* TBProgressBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = TBProgressBarView.m; path = ../Tunebar/TBProgressBarView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		7785662C157E8E42006447A9 /* Tunebar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tunebar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		77856630157E8E42006447A9 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		77856633157E8E42006447A9 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		77856634157E8E42006447A9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		77856635157E8E42006447A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		77856638157E8E42006447A9 /* Tunebar-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Tunebar-Info.plist"; path = "../Tunebar/Tunebar-Info.plist"; sourceTree = "<group>"; };
+		7785663A157E8E42006447A9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7785663C157E8E42006447A9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = main.m; path = ../Tunebar/main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		7785663E157E8E42006447A9 /* Tunebar-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = "Tunebar-Prefix.pch"; path = "../Tunebar/Tunebar-Prefix.pch"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		77856640157E8E42006447A9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		77856642157E8E42006447A9 /* TBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = TBAppDelegate.h; path = ../Tunebar/TBAppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		77856643157E8E42006447A9 /* TBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = TBAppDelegate.m; path = ../Tunebar/TBAppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		77856646157E8E43006447A9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/Main.xib; sourceTree = "<group>"; };
+		7785664D157E8E53006447A9 /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
+		7785664F157E8FA3006447A9 /* TBPopoverWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = TBPopoverWindowController.h; path = ../Tunebar/TBPopoverWindowController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		77856650157E8FA3006447A9 /* TBPopoverWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = TBPopoverWindowController.m; path = ../Tunebar/TBPopoverWindowController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		77856651157E8FA3006447A9 /* PopoverWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PopoverWindow.xib; path = ../Tunebar/PopoverWindow.xib; sourceTree = "<group>"; };
+		7785665B157E95DA006447A9 /* TBTransparentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = TBTransparentView.h; path = ../Tunebar/TBTransparentView.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		7785665C157E95DA006447A9 /* TBTransparentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = TBTransparentView.m; path = ../Tunebar/TBTransparentView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		77856678157E9E8B006447A9 /* TBStatusItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = TBStatusItemView.h; path = ../Tunebar/TBStatusItemView.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		77856679157E9E8B006447A9 /* TBStatusItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = TBStatusItemView.m; path = ../Tunebar/TBStatusItemView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		77C6CE75157FEB4300B2100D /* TBPreferencesButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = TBPreferencesButton.h; path = ../Tunebar/TBPreferencesButton.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		77C6CE76157FEB4300B2100D /* TBPreferencesButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = TBPreferencesButton.m; path = ../Tunebar/TBPreferencesButton.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		77C93FFA1584D49E00BE1BA1 /* Tunebar.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Tunebar.icns; path = Tunebar/Tunebar.icns; sourceTree = SOURCE_ROOT; };
+		77CE4753158512C200FC63A4 /* TBScrollTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBScrollTextView.h; sourceTree = "<group>"; };
+		77CE4754158512C200FC63A4 /* TBScrollTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBScrollTextView.m; sourceTree = "<group>"; };
+		77CEE93A157EA1B80001A9C4 /* TBStatusItemViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = TBStatusItemViewDelegate.h; path = ../Tunebar/TBStatusItemViewDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		77EEABAD15809B3D005C0A9B /* TBPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = TBPreferencesWindowController.h; path = ../Tunebar/TBPreferencesWindowController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		77EEABAE15809B3D005C0A9B /* TBPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = TBPreferencesWindowController.m; path = ../Tunebar/TBPreferencesWindowController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		77EEABAF15809B3D005C0A9B /* PreferencesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PreferencesWindow.xib; path = ../Tunebar/PreferencesWindow.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		77856629157E8E42006447A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7785664E157E8E53006447A9 /* ScriptingBridge.framework in Frameworks */,
+				77856631157E8E42006447A9 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		777DB787157F725400D16FDD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				777DB784157F724D00D16FDD /* TBiTunesController.h */,
+				777DB785157F724D00D16FDD /* TBiTunesController.m */,
+				7785664F157E8FA3006447A9 /* TBPopoverWindowController.h */,
+				77856650157E8FA3006447A9 /* TBPopoverWindowController.m */,
+				77EEABAD15809B3D005C0A9B /* TBPreferencesWindowController.h */,
+				77EEABAE15809B3D005C0A9B /* TBPreferencesWindowController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		777DB788157F762000D16FDD /* Scripting Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				777DB789157F764100D16FDD /* iTunes.h */,
+			);
+			name = "Scripting Bridge";
+			sourceTree = "<group>";
+		};
+		77856621157E8E42006447A9 = {
+			isa = PBXGroup;
+			children = (
+				77856636157E8E42006447A9 /* Tunebar */,
+				7785662F157E8E42006447A9 /* Frameworks */,
+				7785662D157E8E42006447A9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7785662D157E8E42006447A9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7785662C157E8E42006447A9 /* Tunebar.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7785662F157E8E42006447A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7785664D157E8E53006447A9 /* ScriptingBridge.framework */,
+				77856630157E8E42006447A9 /* Cocoa.framework */,
+				77856632157E8E42006447A9 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		77856632157E8E42006447A9 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				77856633157E8E42006447A9 /* AppKit.framework */,
+				77856634157E8E42006447A9 /* CoreData.framework */,
+				77856635157E8E42006447A9 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		77856636157E8E42006447A9 /* Tunebar */ = {
+			isa = PBXGroup;
+			children = (
+				77856642157E8E42006447A9 /* TBAppDelegate.h */,
+				77856643157E8E42006447A9 /* TBAppDelegate.m */,
+				777DB787157F725400D16FDD /* Controllers */,
+				7785665E157E95DF006447A9 /* Views */,
+				77CEE938157EA1860001A9C4 /* Protocols */,
+				777DB788157F762000D16FDD /* Scripting Bridge */,
+				7785665F157E96D5006447A9 /* Resources */,
+				77856637157E8E42006447A9 /* Supporting Files */,
+			);
+			path = Tunebar;
+			sourceTree = "<group>";
+		};
+		77856637157E8E42006447A9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				77856638157E8E42006447A9 /* Tunebar-Info.plist */,
+				77856639157E8E42006447A9 /* InfoPlist.strings */,
+				7785663C157E8E42006447A9 /* main.m */,
+				7785663E157E8E42006447A9 /* Tunebar-Prefix.pch */,
+				7785663F157E8E42006447A9 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7785665E157E95DF006447A9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7785665B157E95DA006447A9 /* TBTransparentView.h */,
+				7785665C157E95DA006447A9 /* TBTransparentView.m */,
+				77856678157E9E8B006447A9 /* TBStatusItemView.h */,
+				77856679157E9E8B006447A9 /* TBStatusItemView.m */,
+				77212502158A3C9800B3746E /* TBControlOverlayView.h */,
+				77212503158A3C9800B3746E /* TBControlOverlayView.m */,
+				775346D5157F38DD007991E0 /* TBArtworkImageView.h */,
+				775346D6157F38DD007991E0 /* TBArtworkImageView.m */,
+				777F3FCE15827AA8005FB9FC /* TBProgressBarView.h */,
+				777F3FCF15827AA8005FB9FC /* TBProgressBarView.m */,
+				77212506158A45BA00B3746E /* TBProgressBarImageView.h */,
+				77212507158A45BA00B3746E /* TBProgressBarImageView.m */,
+				775346DB157F4608007991E0 /* TBPanel.h */,
+				775346DC157F4609007991E0 /* TBPanel.m */,
+				77C6CE75157FEB4300B2100D /* TBPreferencesButton.h */,
+				77C6CE76157FEB4300B2100D /* TBPreferencesButton.m */,
+				77CE4753158512C200FC63A4 /* TBScrollTextView.h */,
+				77CE4754158512C200FC63A4 /* TBScrollTextView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		7785665F157E96D5006447A9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				77856660157E96E1006447A9 /* Images */,
+				77856661157E96E7006447A9 /* XIBs */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		77856660157E96E1006447A9 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				77C93FFA1584D49E00BE1BA1 /* Tunebar.icns */,
+				7739C47B1588B39200479998 /* artwork_overlay.png */,
+				7739C47C1588B39200479998 /* control_overlay.png */,
+				7739C47D1588B39200479998 /* next_button_active.png */,
+				7739C47E1588B39200479998 /* next_button.png */,
+				77212509158A490000B3746E /* progress_bar.png */,
+				7739C47F1588B39200479998 /* pause_button_active.png */,
+				7739C4801588B39200479998 /* pause_button.png */,
+				7739C4811588B39200479998 /* play_button_active.png */,
+				7739C4821588B39200479998 /* play_button.png */,
+				7739C4831588B39200479998 /* preferences_button.png */,
+				7739C4841588B39200479998 /* previous_button_active.png */,
+				7739C4851588B39200479998 /* previous_button.png */,
+				7739C4871588B39300479998 /* window_background.png */,
+				7754E1E0158149D000A67BD5 /* artwork_default.png */,
+				774C7FD3158362830045FFC5 /* statusicon_highlight.png */,
+				774C7FD1158362160045FFC5 /* statusicon_default.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		77856661157E96E7006447A9 /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				77856651157E8FA3006447A9 /* PopoverWindow.xib */,
+				77856645157E8E42006447A9 /* Main.xib */,
+				77EEABAF15809B3D005C0A9B /* PreferencesWindow.xib */,
+			);
+			name = XIBs;
+			sourceTree = "<group>";
+		};
+		77CEE938157EA1860001A9C4 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				77CEE93A157EA1B80001A9C4 /* TBStatusItemViewDelegate.h */,
+				777DB782157F6D1300D16FDD /* TBPlayerDelegate.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7785662B157E8E42006447A9 /* Tunebar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7785664A157E8E43006447A9 /* Build configuration list for PBXNativeTarget "Tunebar" */;
+			buildPhases = (
+				77856628157E8E42006447A9 /* Sources */,
+				77856629157E8E42006447A9 /* Frameworks */,
+				7785662A157E8E42006447A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tunebar;
+			productName = ZenTunes;
+			productReference = 7785662C157E8E42006447A9 /* Tunebar.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		77856623157E8E42006447A9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TB;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 77856626157E8E42006447A9 /* Build configuration list for PBXProject "Tunebar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 77856621157E8E42006447A9;
+			productRefGroup = 7785662D157E8E42006447A9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7785662B157E8E42006447A9 /* Tunebar */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7785662A157E8E42006447A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7785663B157E8E42006447A9 /* InfoPlist.strings in Resources */,
+				77856641157E8E42006447A9 /* Credits.rtf in Resources */,
+				77856647157E8E43006447A9 /* Main.xib in Resources */,
+				77856653157E8FA3006447A9 /* PopoverWindow.xib in Resources */,
+				77EEABB115809B3D005C0A9B /* PreferencesWindow.xib in Resources */,
+				7754E1E1158149D000A67BD5 /* artwork_default.png in Resources */,
+				774C7FD2158362160045FFC5 /* statusicon_default.png in Resources */,
+				774C7FD4158362830045FFC5 /* statusicon_highlight.png in Resources */,
+				77C93FFB1584D49E00BE1BA1 /* Tunebar.icns in Resources */,
+				7739C4881588B39300479998 /* artwork_overlay.png in Resources */,
+				7739C4891588B39300479998 /* control_overlay.png in Resources */,
+				7739C48A1588B39300479998 /* next_button_active.png in Resources */,
+				7739C48B1588B39300479998 /* next_button.png in Resources */,
+				7739C48C1588B39300479998 /* pause_button_active.png in Resources */,
+				7739C48D1588B39300479998 /* pause_button.png in Resources */,
+				7739C48E1588B39300479998 /* play_button_active.png in Resources */,
+				7739C48F1588B39300479998 /* play_button.png in Resources */,
+				7739C4901588B39300479998 /* preferences_button.png in Resources */,
+				7739C4911588B39300479998 /* previous_button_active.png in Resources */,
+				7739C4921588B39300479998 /* previous_button.png in Resources */,
+				7739C4941588B39300479998 /* window_background.png in Resources */,
+				7721250A158A490000B3746E /* progress_bar.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		77856628157E8E42006447A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7785663D157E8E42006447A9 /* main.m in Sources */,
+				77856644157E8E42006447A9 /* TBAppDelegate.m in Sources */,
+				77856652157E8FA3006447A9 /* TBPopoverWindowController.m in Sources */,
+				7785665D157E95DA006447A9 /* TBTransparentView.m in Sources */,
+				7785667A157E9E8B006447A9 /* TBStatusItemView.m in Sources */,
+				775346D7157F38DD007991E0 /* TBArtworkImageView.m in Sources */,
+				775346DD157F4609007991E0 /* TBPanel.m in Sources */,
+				777DB786157F724D00D16FDD /* TBiTunesController.m in Sources */,
+				77C6CE77157FEB4300B2100D /* TBPreferencesButton.m in Sources */,
+				77EEABB015809B3D005C0A9B /* TBPreferencesWindowController.m in Sources */,
+				777F3FD015827AA8005FB9FC /* TBProgressBarView.m in Sources */,
+				77CE4755158512C200FC63A4 /* TBScrollTextView.m in Sources */,
+				77212504158A3C9800B3746E /* TBControlOverlayView.m in Sources */,
+				77212508158A45BA00B3746E /* TBProgressBarImageView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		77856639157E8E42006447A9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7785663A157E8E42006447A9 /* en */,
+			);
+			name = InfoPlist.strings;
+			path = ../Tunebar;
+			sourceTree = "<group>";
+		};
+		7785663F157E8E42006447A9 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				77856640157E8E42006447A9 /* en */,
+			);
+			name = Credits.rtf;
+			path = ../Tunebar;
+			sourceTree = "<group>";
+		};
+		77856645157E8E42006447A9 /* Main.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				77856646157E8E43006447A9 /* en */,
+			);
+			name = Main.xib;
+			path = ../Tunebar;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		77856648157E8E43006447A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		77856649157E8E43006447A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		7785664B157E8E43006447A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tunebar/Tunebar-Prefix.pch";
+				GCC_VERSION = "";
+				INFOPLIST_FILE = "Tunebar/Tunebar-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = Tunebar;
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7785664C157E8E43006447A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tunebar/Tunebar-Prefix.pch";
+				GCC_VERSION = "";
+				INFOPLIST_FILE = "Tunebar/Tunebar-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = Tunebar;
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		77856626157E8E42006447A9 /* Build configuration list for PBXProject "Tunebar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77856648157E8E43006447A9 /* Debug */,
+				77856649157E8E43006447A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7785664A157E8E43006447A9 /* Build configuration list for PBXNativeTarget "Tunebar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7785664B157E8E43006447A9 /* Debug */,
+				7785664C157E8E43006447A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 77856623157E8E42006447A9 /* Project object */;
+}
