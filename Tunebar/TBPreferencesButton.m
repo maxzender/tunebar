@@ -5,7 +5,7 @@
 - (void)mouseDown:(NSEvent *)theEvent
 {
     // display menu at custom location
-    NSPoint menuPosition = NSMakePoint(self.frame.origin.x, self.frame.origin.y - self.frame.size.height / 2);
+    NSPoint menuPosition = NSMakePoint(self.window.frame.size.width - 4, 0);
     NSEvent *event = [NSEvent mouseEventWithType:NSLeftMouseDown
                                         location:menuPosition
                                    modifierFlags:NSLeftMouseDownMask
