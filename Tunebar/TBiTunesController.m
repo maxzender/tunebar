@@ -68,12 +68,12 @@
     NSImage *artwork = [NSImage imageNamed:@"artwork_default"];
     
     if ([_iTunes isRunning]) {
-        NSArray *iTunesArtworks = [_iTunes.currentTrack.artworks get];
+        SBElementArray *iTunesArtworks = _iTunes.currentTrack.artworks;
         if ([iTunesArtworks count] > 0) {
             artwork = [[NSImage alloc] initWithData:[[iTunesArtworks objectAtIndex:0] rawData]];
         }
     }
-    
+
     return artwork;
 }
 
