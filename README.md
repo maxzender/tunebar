@@ -1,6 +1,8 @@
 #Tunebar
 A menubar application that simplifies the way you listen to music. This is a work in progress.
 
+Download the compiled executable [here](https://github.com/downloads/maxzender/tunebar/Tunebar.zip).
+
 ##Screenshots
 ![Tunebar](https://raw.github.com/maxzender/tunebar/master/screenshots/shot1.jpg)
 
