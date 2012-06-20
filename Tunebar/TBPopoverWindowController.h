@@ -2,7 +2,7 @@
 #import "TBPlayerDelegate.h"
 
 #define ANIMATION_DURATION .2
-#define POPOVER_WIDTH 154.0
+#define PROGRESS_BAR_WIDTH 154.0
 #define PROGRESS_BAR_X 112
 #define PROGRESS_BAR_Y 14
 #define PROGRESS_BAR_HEIGHT 8.0

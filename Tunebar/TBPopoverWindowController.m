@@ -31,7 +31,7 @@
     [self.window setLevel:NSPopUpMenuWindowLevel + 1];
     [self.window setOpaque:NO];
     [self.window setBackgroundColor:[NSColor clearColor]];
-    self.progressBarView = [[TBProgressBarView alloc] initWithFrame:NSMakeRect(PROGRESS_BAR_X, PROGRESS_BAR_Y, POPOVER_WIDTH, PROGRESS_BAR_HEIGHT)];
+    self.progressBarView = [[TBProgressBarView alloc] initWithFrame:NSMakeRect(PROGRESS_BAR_X, PROGRESS_BAR_Y, PROGRESS_BAR_WIDTH, PROGRESS_BAR_HEIGHT)];
     [self.window.contentView addSubview:self.progressBarView];
     
     [self.controlOverlay setAlphaValue:0.0];
@@ -215,7 +215,7 @@
 - (void)updateProgressBarWidth {
     double progress = [self.playerDelegate progress];
     NSRect progressFrame = self.progressBarView.frame;
-    progressFrame.size.width = round(progress * POPOVER_WIDTH);
+    progressFrame.size.width = round(progress * PROGRESS_BAR_WIDTH);
     [self.progressBarView setFrame:progressFrame];
     [self.progressBarView setNeedsDisplay:YES];
 }
