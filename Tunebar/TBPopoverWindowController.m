@@ -135,7 +135,7 @@
     NSRect statusItemRect = _statusItem.view.window.frame;
     NSRect panelRect = self.window.frame;
     panelRect.origin.x = roundf(NSMidX(statusItemRect) - NSWidth(panelRect) / 2) + ARROW_POSITION;
-    panelRect.origin.y = NSMaxY(statusItemRect) - NSHeight(panelRect) - statusItemRect.size.height;
+    panelRect.origin.y = NSMaxY(statusItemRect) - NSHeight(panelRect) - statusItemRect.size.height + 6;
     
     NSRect animationOriginRect = panelRect;
     animationOriginRect.origin.y = NSMaxY(statusItemRect) - NSHeight(panelRect) - (statusItemRect.size.height * 2);
