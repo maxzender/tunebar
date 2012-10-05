@@ -7,6 +7,8 @@
 - (id)init {
     self = [super init];
     if (self) {
+        _players = [NSDictionary dictionaryWithObjectsAndKeys:@"com.apple.iTunes.playerInfo",
+                    @"iTunes", @"com.rdio.desktop.playStateChanged", @"Rdio", nil];
         [self registerNotifications];
     }
     
@@ -22,17 +24,7 @@
 }
 
 - (void)playerStateChanged:(NSNotification *)notification {
-    if (notification.name == @"com.apple.iTunes.playerInfo"
-        && ![[self currentPlayer] isKindOfClass:[TBiTunesController class]]) {
-        
-        _currentPlayer = [[TBiTunesController alloc] init];
-        
-    } else if (notification.name == @"com.rdio.desktop.playStateChanged"
-               && ![[self currentPlayer] isKindOfClass:[TBRdioController class]]) {
-        
-        _currentPlayer = [[TBRdioController alloc] init];
-        
-    }
+    _currentPlayer = [self getCurrentPlayerByNotification:notification];
     [self postPlayerStateChangedNotification];
 }
 
@@ -40,10 +32,8 @@
 #pragma mark Player notifications
 
 - (void)registerNotifications {
-    NSArray *players = [NSArray arrayWithObjects:@"com.apple.iTunes.playerInfo", @"com.rdio.desktop.playStateChanged", nil];
-    
-    for (NSString *player in players) {
-        [self registerNotificationForName:player];
+    for (NSString *player in _players) {
+        [self registerNotificationForName:[_players objectForKey:player]];
     }
 }
 
@@ -69,13 +59,53 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_NAME object:self];
 }
 
-#pragma mark -
+#pragma mark Determining the current player
 
 - (id)currentPlayer {
     if (_currentPlayer == nil) {
-        _currentPlayer = [[TBRdioController alloc] init];
+        _currentPlayer = [self getCurrentPlayer];
     }
+    
     return _currentPlayer;
+}
+
+- (id)getCurrentPlayer {
+    id player;
+    TBiTunesController *iTunes = [[TBiTunesController alloc] init];
+    
+    if ([iTunes isPlaying]) {
+         player = iTunes;
+    } else {
+        TBRdioController *rdio = [[TBRdioController alloc] init];
+        
+        if ([rdio isPlaying]) {
+            player = rdio;
+        } else {
+            player = iTunes;
+        }
+    }
+    
+    return player;
+}
+
+- (id)getCurrentPlayerByNotification:(NSNotification *)notification {
+    id player;
+    
+    if ([notification.name isEqualToString:[_players objectForKey:@"iTunes"]]
+        && ![[self currentPlayer] isKindOfClass:[TBiTunesController class]]) {
+
+        player = [[TBiTunesController alloc] init];
+        
+    } else if ([notification.name isEqualToString:[_players objectForKey:@"Rdio"]]
+               && ![[self currentPlayer] isKindOfClass:[TBRdioController class]]) {
+
+        player = [[TBRdioController alloc] init];
+        
+    } else {
+        player = _currentPlayer;
+    }
+    
+    return player;
 }
 
 @end
