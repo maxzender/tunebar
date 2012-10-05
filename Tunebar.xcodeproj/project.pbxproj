@@ -45,6 +45,8 @@
 		77CE4755158512C200FC63A4 /* TBScrollTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77CE4754158512C200FC63A4 /* TBScrollTextView.m */; };
 		77EEABB015809B3D005C0A9B /* TBPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77EEABAE15809B3D005C0A9B /* TBPreferencesWindowController.m */; };
 		77EEABB115809B3D005C0A9B /* PreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77EEABAF15809B3D005C0A9B /* PreferencesWindow.xib */; };
+		77F56A55160CB1F700736933 /* TBPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F56A54160CB1F700736933 /* TBPlayerController.m */; };
+		77F80E94161EBFDE008E46BA /* TBRdioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F80E93161EBFDE008E46BA /* TBRdioController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +110,11 @@
 		77EEABAD15809B3D005C0A9B /* TBPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = TBPreferencesWindowController.h; path = ../Tunebar/TBPreferencesWindowController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		77EEABAE15809B3D005C0A9B /* TBPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = TBPreferencesWindowController.m; path = ../Tunebar/TBPreferencesWindowController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		77EEABAF15809B3D005C0A9B /* PreferencesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PreferencesWindow.xib; path = ../Tunebar/PreferencesWindow.xib; sourceTree = "<group>"; };
+		77F56A53160CB1F700736933 /* TBPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBPlayerController.h; sourceTree = "<group>"; };
+		77F56A54160CB1F700736933 /* TBPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBPlayerController.m; sourceTree = "<group>"; };
+		77F80E92161EBFDE008E46BA /* TBRdioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBRdioController.h; sourceTree = "<group>"; };
+		77F80E93161EBFDE008E46BA /* TBRdioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBRdioController.m; sourceTree = "<group>"; };
+		77F80E96161EC051008E46BA /* Rdio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rdio.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +139,10 @@
 				77856650157E8FA3006447A9 /* TBPopoverWindowController.m */,
 				77EEABAD15809B3D005C0A9B /* TBPreferencesWindowController.h */,
 				77EEABAE15809B3D005C0A9B /* TBPreferencesWindowController.m */,
+				77F56A53160CB1F700736933 /* TBPlayerController.h */,
+				77F56A54160CB1F700736933 /* TBPlayerController.m */,
+				77F80E92161EBFDE008E46BA /* TBRdioController.h */,
+				77F80E93161EBFDE008E46BA /* TBRdioController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -140,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				777DB789157F764100D16FDD /* iTunes.h */,
+				77F80E96161EC051008E46BA /* Rdio.h */,
 			);
 			name = "Scripting Bridge";
 			sourceTree = "<group>";
@@ -382,6 +394,8 @@
 				77CE4755158512C200FC63A4 /* TBScrollTextView.m in Sources */,
 				77212504158A3C9800B3746E /* TBControlOverlayView.m in Sources */,
 				77212508158A45BA00B3746E /* TBProgressBarImageView.m in Sources */,
+				77F56A55160CB1F700736933 /* TBPlayerController.m in Sources */,
+				77F80E94161EBFDE008E46BA /* TBRdioController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,7 +1,7 @@
 #import "TBAppDelegate.h"
 #import "TBStatusItemView.h"
 #import "TBPopoverWindowController.h"
-#import "TBiTunesController.h"
+#import "TBPlayerController.h"
 
 @implementation TBAppDelegate
 @synthesize statusItem = _statusItem;
@@ -46,7 +46,7 @@
                                              selector:@selector(popoverDidResignKey:)
                                                  name:NSWindowDidResignKeyNotification
                                                object:nil];
-    [_iTunesController registerNotificationsWithObserver:_popoverController
+    [_playerController registerForNotificationWithObserver:_popoverController
                                                 selector:@selector(playerStateChanged:)];
 }
 
@@ -57,9 +57,9 @@
 
 - (TBPopoverWindowController *)popoverController {
     if (_popoverController == nil) {
-        _iTunesController = [[TBiTunesController alloc] init];
+        _playerController = [[TBPlayerController alloc] init];
         _popoverController = [[TBPopoverWindowController alloc] initWithStatusItem:_statusItem
-                                                                    playerDelegate:_iTunesController];
+                                                                    playerDelegate:_playerController];
         [self registerNotifications];
     }
     

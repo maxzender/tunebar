@@ -90,13 +90,4 @@
     return progress;
 }
 
-- (void)registerNotificationsWithObserver:(id)observer selector:(SEL)selector {
-    if ([observer respondsToSelector:selector]) {
-        [[NSDistributedNotificationCenter defaultCenter] addObserver:observer
-                                                            selector:selector
-                                                                name:@"com.apple.iTunes.playerInfo"
-                                                              object:nil];
-    }
-}
-
 @end

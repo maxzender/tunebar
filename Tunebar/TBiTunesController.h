@@ -6,6 +6,4 @@
     iTunesApplication *_iTunes;
 }
 
-- (void)registerNotificationsWithObserver:(id)observer selector:(SEL)selector;
-
 @end
