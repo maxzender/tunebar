@@ -22,12 +22,13 @@
 		7739C4901588B39300479998 /* preferences_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 7739C4831588B39200479998 /* preferences_button.png */; };
 		7739C4911588B39300479998 /* previous_button_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 7739C4841588B39200479998 /* previous_button_active.png */; };
 		7739C4921588B39300479998 /* previous_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 7739C4851588B39200479998 /* previous_button.png */; };
+		774BB9CD161F2CD4009D94AD /* PlayerInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 774BB9CC161F2CD4009D94AD /* PlayerInfo.plist */; };
 		774C7FD2158362160045FFC5 /* statusicon_default.png in Resources */ = {isa = PBXBuildFile; fileRef = 774C7FD1158362160045FFC5 /* statusicon_default.png */; };
 		774C7FD4158362830045FFC5 /* statusicon_highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 774C7FD3158362830045FFC5 /* statusicon_highlight.png */; };
 		775346D7157F38DD007991E0 /* TBArtworkImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 775346D6157F38DD007991E0 /* TBArtworkImageView.m */; };
 		775346DD157F4609007991E0 /* TBPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 775346DC157F4609007991E0 /* TBPanel.m */; };
 		7754E1E1158149D000A67BD5 /* artwork_default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7754E1E0158149D000A67BD5 /* artwork_default.png */; };
-		777DB786157F724D00D16FDD /* TBiTunesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 777DB785157F724D00D16FDD /* TBiTunesController.m */; };
+		777DB786157F724D00D16FDD /* TBiTunesPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 777DB785157F724D00D16FDD /* TBiTunesPlayer.m */; };
 		777F3FD015827AA8005FB9FC /* TBProgressBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 777F3FCF15827AA8005FB9FC /* TBProgressBarView.m */; };
 		77856631157E8E42006447A9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77856630157E8E42006447A9 /* Cocoa.framework */; };
 		7785663B157E8E42006447A9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77856639157E8E42006447A9 /* InfoPlist.strings */; };
@@ -45,8 +46,8 @@
 		77CE4755158512C200FC63A4 /* TBScrollTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77CE4754158512C200FC63A4 /* TBScrollTextView.m */; };
 		77EEABB015809B3D005C0A9B /* TBPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77EEABAE15809B3D005C0A9B /* TBPreferencesWindowController.m */; };
 		77EEABB115809B3D005C0A9B /* PreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77EEABAF15809B3D005C0A9B /* PreferencesWindow.xib */; };
-		77F56A55160CB1F700736933 /* TBPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F56A54160CB1F700736933 /* TBPlayerController.m */; };
-		77F80E94161EBFDE008E46BA /* TBRdioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F80E93161EBFDE008E46BA /* TBRdioController.m */; };
+		77F56A55160CB1F700736933 /* TBPlayerDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F56A54160CB1F700736933 /* TBPlayerDispatcher.m */; };
+		77F80E94161EBFDE008E46BA /* TBRdioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F80E93161EBFDE008E46BA /* TBRdioPlayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,8 @@
 		7739C4831588B39200479998 /* preferences_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preferences_button.png; sourceTree = "<group>"; };
 		7739C4841588B39200479998 /* previous_button_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = previous_button_active.png; sourceTree = "<group>"; };
 		7739C4851588B39200479998 /* previous_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = previous_button.png; sourceTree = "<group>"; };
+		774BB9CC161F2CD4009D94AD /* PlayerInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PlayerInfo.plist; sourceTree = "<group>"; };
+		774BB9D6161F4A27009D94AD /* Spotify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spotify.h; sourceTree = "<group>"; };
 		774C7FD1158362160045FFC5 /* statusicon_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = statusicon_default.png; path = ../Tunebar/statusicon_default.png; sourceTree = "<group>"; };
 		774C7FD3158362830045FFC5 /* statusicon_highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = statusicon_highlight.png; path = ../Tunebar/statusicon_highlight.png; sourceTree = "<group>"; };
 		775346D5157F38DD007991E0 /* TBArtworkImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = TBArtworkImageView.h; path = ../Tunebar/TBArtworkImageView.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -75,8 +78,8 @@
 		775346DC157F4609007991E0 /* TBPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = TBPanel.m; path = ../Tunebar/TBPanel.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		7754E1E0158149D000A67BD5 /* artwork_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = artwork_default.png; path = ../Tunebar/artwork_default.png; sourceTree = "<group>"; };
 		777DB782157F6D1300D16FDD /* TBPlayerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = TBPlayerDelegate.h; path = ../Tunebar/TBPlayerDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		777DB784157F724D00D16FDD /* TBiTunesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = TBiTunesController.h; path = ../Tunebar/TBiTunesController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		777DB785157F724D00D16FDD /* TBiTunesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = TBiTunesController.m; path = ../Tunebar/TBiTunesController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		777DB784157F724D00D16FDD /* TBiTunesPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = TBiTunesPlayer.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		777DB785157F724D00D16FDD /* TBiTunesPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = TBiTunesPlayer.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		777DB789157F764100D16FDD /* iTunes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iTunes.h; path = ../Tunebar/iTunes.h; sourceTree = "<group>"; };
 		777F3FCE15827AA8005FB9FC /* TBProgressBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = TBProgressBarView.h; path = ../Tunebar/TBProgressBarView.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		777F3FCF15827AA8005FB9FC /* TBProgressBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = TBProgressBarView.m; path = ../Tunebar/TBProgressBarView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
@@ -110,10 +113,10 @@
 		77EEABAD15809B3D005C0A9B /* TBPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = TBPreferencesWindowController.h; path = ../Tunebar/TBPreferencesWindowController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		77EEABAE15809B3D005C0A9B /* TBPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = TBPreferencesWindowController.m; path = ../Tunebar/TBPreferencesWindowController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		77EEABAF15809B3D005C0A9B /* PreferencesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PreferencesWindow.xib; path = ../Tunebar/PreferencesWindow.xib; sourceTree = "<group>"; };
-		77F56A53160CB1F700736933 /* TBPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBPlayerController.h; sourceTree = "<group>"; };
-		77F56A54160CB1F700736933 /* TBPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBPlayerController.m; sourceTree = "<group>"; };
-		77F80E92161EBFDE008E46BA /* TBRdioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBRdioController.h; sourceTree = "<group>"; };
-		77F80E93161EBFDE008E46BA /* TBRdioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBRdioController.m; sourceTree = "<group>"; };
+		77F56A53160CB1F700736933 /* TBPlayerDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBPlayerDispatcher.h; sourceTree = "<group>"; };
+		77F56A54160CB1F700736933 /* TBPlayerDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBPlayerDispatcher.m; sourceTree = "<group>"; };
+		77F80E92161EBFDE008E46BA /* TBRdioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBRdioPlayer.h; sourceTree = "<group>"; };
+		77F80E93161EBFDE008E46BA /* TBRdioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBRdioPlayer.m; sourceTree = "<group>"; };
 		77F80E96161EC051008E46BA /* Rdio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rdio.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,19 +133,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		774BB9CE161F310E009D94AD /* Players */ = {
+			isa = PBXGroup;
+			children = (
+				777DB784157F724D00D16FDD /* TBiTunesPlayer.h */,
+				777DB785157F724D00D16FDD /* TBiTunesPlayer.m */,
+				77F80E92161EBFDE008E46BA /* TBRdioPlayer.h */,
+				77F80E93161EBFDE008E46BA /* TBRdioPlayer.m */,
+			);
+			name = Players;
+			sourceTree = "<group>";
+		};
 		777DB787157F725400D16FDD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				777DB784157F724D00D16FDD /* TBiTunesController.h */,
-				777DB785157F724D00D16FDD /* TBiTunesController.m */,
 				7785664F157E8FA3006447A9 /* TBPopoverWindowController.h */,
 				77856650157E8FA3006447A9 /* TBPopoverWindowController.m */,
 				77EEABAD15809B3D005C0A9B /* TBPreferencesWindowController.h */,
 				77EEABAE15809B3D005C0A9B /* TBPreferencesWindowController.m */,
-				77F56A53160CB1F700736933 /* TBPlayerController.h */,
-				77F56A54160CB1F700736933 /* TBPlayerController.m */,
-				77F80E92161EBFDE008E46BA /* TBRdioController.h */,
-				77F80E93161EBFDE008E46BA /* TBRdioController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -151,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				777DB789157F764100D16FDD /* iTunes.h */,
+				774BB9D6161F4A27009D94AD /* Spotify.h */,
 				77F80E96161EC051008E46BA /* Rdio.h */,
 			);
 			name = "Scripting Bridge";
@@ -198,6 +207,9 @@
 			children = (
 				77856642157E8E42006447A9 /* TBAppDelegate.h */,
 				77856643157E8E42006447A9 /* TBAppDelegate.m */,
+				77F56A53160CB1F700736933 /* TBPlayerDispatcher.h */,
+				77F56A54160CB1F700736933 /* TBPlayerDispatcher.m */,
+				774BB9CE161F310E009D94AD /* Players */,
 				777DB787157F725400D16FDD /* Controllers */,
 				7785665E157E95DF006447A9 /* Views */,
 				77CEE938157EA1860001A9C4 /* Protocols */,
@@ -250,6 +262,7 @@
 			children = (
 				77856660157E96E1006447A9 /* Images */,
 				77856661157E96E7006447A9 /* XIBs */,
+				774BB9CC161F2CD4009D94AD /* PlayerInfo.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -370,6 +383,7 @@
 				7739C4921588B39300479998 /* previous_button.png in Resources */,
 				7721250A158A490000B3746E /* progress_bar.png in Resources */,
 				7722D7AE158F20470047AF07 /* window_background.png in Resources */,
+				774BB9CD161F2CD4009D94AD /* PlayerInfo.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,15 +401,15 @@
 				7785667A157E9E8B006447A9 /* TBStatusItemView.m in Sources */,
 				775346D7157F38DD007991E0 /* TBArtworkImageView.m in Sources */,
 				775346DD157F4609007991E0 /* TBPanel.m in Sources */,
-				777DB786157F724D00D16FDD /* TBiTunesController.m in Sources */,
+				777DB786157F724D00D16FDD /* TBiTunesPlayer.m in Sources */,
 				77C6CE77157FEB4300B2100D /* TBPreferencesButton.m in Sources */,
 				77EEABB015809B3D005C0A9B /* TBPreferencesWindowController.m in Sources */,
 				777F3FD015827AA8005FB9FC /* TBProgressBarView.m in Sources */,
 				77CE4755158512C200FC63A4 /* TBScrollTextView.m in Sources */,
 				77212504158A3C9800B3746E /* TBControlOverlayView.m in Sources */,
 				77212508158A45BA00B3746E /* TBProgressBarImageView.m in Sources */,
-				77F56A55160CB1F700736933 /* TBPlayerController.m in Sources */,
-				77F80E94161EBFDE008E46BA /* TBRdioController.m in Sources */,
+				77F56A55160CB1F700736933 /* TBPlayerDispatcher.m in Sources */,
+				77F80E94161EBFDE008E46BA /* TBRdioPlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

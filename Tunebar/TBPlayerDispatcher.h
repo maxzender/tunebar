@@ -3,10 +3,9 @@
 
 #define NOTIFICATION_NAME @"playerStateChanged"
 
-
-@interface TBPlayerController : NSObject {
+@interface TBPlayerDispatcher : NSObject {
     id <TBPlayerDelegate> _currentPlayer;
-    NSDictionary *_players;
+    NSDictionary *_playerNotificationNames;
 }
 
 - (void)registerForNotificationWithObserver:(id)observer selector:(SEL)selector;

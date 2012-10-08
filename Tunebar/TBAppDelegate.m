@@ -1,7 +1,7 @@
 #import "TBAppDelegate.h"
 #import "TBStatusItemView.h"
 #import "TBPopoverWindowController.h"
-#import "TBPlayerController.h"
+#import "TBPlayerDispatcher.h"
 
 @implementation TBAppDelegate
 @synthesize statusItem = _statusItem;
@@ -57,7 +57,7 @@
 
 - (TBPopoverWindowController *)popoverController {
     if (_popoverController == nil) {
-        _playerController = [[TBPlayerController alloc] init];
+        _playerController = [[TBPlayerDispatcher alloc] init];
         _popoverController = [[TBPopoverWindowController alloc] initWithStatusItem:_statusItem
                                                                     playerDelegate:_playerController];
         [self registerNotifications];

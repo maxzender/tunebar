@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DefaultPlayer</key>
+	<string>iTunes</string>
+	<key>SupportedPlayers</key>
+	<dict>
+		<key>iTunes</key>
+		<dict>
+			<key>bundleIdentifier</key>
+			<string>com.apple.iTunes</string>
+			<key>notificationName</key>
+			<string>com.apple.iTunes.playerInfo</string>
+			<key>className</key>
+			<string>TBiTunesPlayer</string>
+		</dict>
+		<key>Spotify</key>
+		<dict>
+			<key>bundleIdentifier</key>
+			<string>com.spotify.client</string>
+			<key>notificationName</key>
+			<string>com.spotify.client.PlaybackStateChanged</string>
+			<key>className</key>
+			<string>TBSpotifyPlayer</string>
+		</dict>
+		<key>Rdio</key>
+		<dict>
+			<key>bundleIdentifier</key>
+			<string>com.rdio.desktop</string>
+			<key>notificationName</key>
+			<string>com.rdio.desktop.playStateChanged</string>
+			<key>className</key>
+			<string>TBRdioPlayer</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

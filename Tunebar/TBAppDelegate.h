@@ -1,10 +1,10 @@
 #import <Cocoa/Cocoa.h>
 #import "TBStatusItemViewDelegate.h"
-@class TBPopoverWindowController, TBStatusItemView, TBPlayerController;
+@class TBPopoverWindowController, TBStatusItemView, TBPlayerDispatcher;
 
 @interface TBAppDelegate : NSObject <NSApplicationDelegate, TBStatusItemViewDelegate> {
     TBPopoverWindowController *_popoverController;
-    TBPlayerController *_playerController;
+    TBPlayerDispatcher *_playerController;
 }
 
 @property (nonatomic, strong, readonly) TBPopoverWindowController *popoverController;

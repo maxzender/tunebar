@@ -1,13 +1,13 @@
-#import "TBPlayerController.h"
-#import "TBiTunesController.h"
-#import "TBRdioController.h"
+#import "TBPlayerDispatcher.h"
+#import "TBiTunesPlayer.h"
+#import "TBRdioPlayer.h"
 
-@implementation TBPlayerController
+@implementation TBPlayerDispatcher
 
 - (id)init {
     self = [super init];
     if (self) {
-        _players = [NSDictionary dictionaryWithObjectsAndKeys:@"com.apple.iTunes.playerInfo",
+        _playerNotificationNames = [NSDictionary dictionaryWithObjectsAndKeys:@"com.apple.iTunes.playerInfo",
                     @"iTunes", @"com.rdio.desktop.playStateChanged", @"Rdio", nil];
         [self registerNotifications];
     }
@@ -32,8 +32,8 @@
 #pragma mark Player notifications
 
 - (void)registerNotifications {
-    for (NSString *player in _players) {
-        [self registerNotificationForName:[_players objectForKey:player]];
+    for (NSString *notificationName in _playerNotificationNames) {
+        [self registerNotificationForName:[_playerNotificationNames objectForKey:notificationName]];
     }
 }
 
@@ -71,12 +71,12 @@
 
 - (id)getCurrentPlayer {
     id player;
-    TBiTunesController *iTunes = [[TBiTunesController alloc] init];
+    TBiTunesPlayer *iTunes = [[TBiTunesPlayer alloc] init];
     
     if ([iTunes isPlaying]) {
          player = iTunes;
     } else {
-        TBRdioController *rdio = [[TBRdioController alloc] init];
+        TBRdioPlayer *rdio = [[TBRdioPlayer alloc] init];
         
         if ([rdio isPlaying]) {
             player = rdio;
@@ -91,15 +91,15 @@
 - (id)getCurrentPlayerByNotification:(NSNotification *)notification {
     id player;
     
-    if ([notification.name isEqualToString:[_players objectForKey:@"iTunes"]]
-        && ![[self currentPlayer] isKindOfClass:[TBiTunesController class]]) {
+    if ([notification.name isEqualToString:[_playerNotificationNames objectForKey:@"iTunes"]]
+        && ![[self currentPlayer] isKindOfClass:[TBiTunesPlayer class]]) {
 
-        player = [[TBiTunesController alloc] init];
+        player = [[TBiTunesPlayer alloc] init];
         
-    } else if ([notification.name isEqualToString:[_players objectForKey:@"Rdio"]]
-               && ![[self currentPlayer] isKindOfClass:[TBRdioController class]]) {
+    } else if ([notification.name isEqualToString:[_playerNotificationNames objectForKey:@"Rdio"]]
+               && ![[self currentPlayer] isKindOfClass:[TBRdioPlayer class]]) {
 
-        player = [[TBRdioController alloc] init];
+        player = [[TBRdioPlayer alloc] init];
         
     } else {
         player = _currentPlayer;

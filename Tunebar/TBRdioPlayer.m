@@ -1,7 +1,7 @@
-#import "TBRdioController.h"
+#import "TBRdioPlayer.h"
 #import "Rdio.h"
 
-@implementation TBRdioController
+@implementation TBRdioPlayer
 
 - (id)init {
     self = [super init];

@@ -1,7 +1,7 @@
-#import "TBiTunesController.h"
+#import "TBiTunesPlayer.h"
 #import "iTunes.h"
 
-@implementation TBiTunesController
+@implementation TBiTunesPlayer
 
 - (id)init {
     self = [super init];

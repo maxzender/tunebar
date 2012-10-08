@@ -2,7 +2,7 @@
 #import "TBPlayerDelegate.h"
 @class RdioApplication;
 
-@interface TBRdioController : NSObject <TBPlayerDelegate> {
+@interface TBRdioPlayer : NSObject <TBPlayerDelegate> {
     RdioApplication *_rdio;
 }
 

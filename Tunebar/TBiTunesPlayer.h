@@ -2,7 +2,7 @@
 #import "TBPlayerDelegate.h"
 @class iTunesApplication;
 
-@interface TBiTunesController : NSObject <TBPlayerDelegate> {
+@interface TBiTunesPlayer : NSObject <TBPlayerDelegate> {
     iTunesApplication *_iTunes;
 }
 
