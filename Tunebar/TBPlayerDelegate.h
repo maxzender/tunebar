@@ -2,6 +2,7 @@
 
 @protocol TBPlayerDelegate <NSObject>
 
+- (id)initWithBundleIdentifier:(NSString *)bundleIdentifier;
 - (void)playButtonPressed;
 - (void)nextButtonPressed;
 - (void)previousButtonPressed;

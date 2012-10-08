@@ -3,10 +3,10 @@
 
 @implementation TBRdioPlayer
 
-- (id)init {
+- (id)initWithBundleIdentifier:(NSString *)bundleIdentifier {
     self = [super init];
     if (self) {
-        _rdio = [SBApplication applicationWithBundleIdentifier:@"com.rdio.desktop"];
+        _rdio = [SBApplication applicationWithBundleIdentifier:bundleIdentifier];
     }
     
     return self;

@@ -3,10 +3,10 @@
 
 @implementation TBiTunesPlayer
 
-- (id)init {
+- (id)initWithBundleIdentifier:(NSString *)bundleIdentifier {
     self = [super init];
     if (self) {
-        _iTunes = [SBApplication applicationWithBundleIdentifier:@"com.apple.iTunes"];
+        _iTunes = [SBApplication applicationWithBundleIdentifier:bundleIdentifier];
     }
     
     return self;

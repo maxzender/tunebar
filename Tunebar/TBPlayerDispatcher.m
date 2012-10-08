@@ -7,8 +7,12 @@
 - (id)init {
     self = [super init];
     if (self) {
-        _playerNotificationNames = [NSDictionary dictionaryWithObjectsAndKeys:@"com.apple.iTunes.playerInfo",
-                    @"iTunes", @"com.rdio.desktop.playStateChanged", @"Rdio", nil];
+        NSString *playerInfoFile = [[NSBundle mainBundle] pathForResource:@"PlayerInfo" ofType:@"plist"];
+        NSDictionary *playerInfo = [NSDictionary dictionaryWithContentsOfFile:playerInfoFile];
+
+        _playerData = [playerInfo objectForKey:@"SupportedPlayers"];
+        _defaultPlayer = [playerInfo objectForKey:@"DefaultPlayer"];
+
         [self registerNotifications];
     }
     
@@ -32,8 +36,8 @@
 #pragma mark Player notifications
 
 - (void)registerNotifications {
-    for (NSString *notificationName in _playerNotificationNames) {
-        [self registerNotificationForName:[_playerNotificationNames objectForKey:notificationName]];
+    for (NSString *playerName in _playerData) {
+        [self registerNotificationForName:[self notificationNameForPlayer:playerName]];
     }
 }
 
@@ -70,18 +74,28 @@
 }
 
 - (id)getCurrentPlayer {
-    id player;
-    TBiTunesPlayer *iTunes = [[TBiTunesPlayer alloc] init];
-    
-    if ([iTunes isPlaying]) {
-         player = iTunes;
+    id player = nil;
+    id <TBPlayerDelegate> defaultPlayer = [self getInstanceForPlayer:_defaultPlayer];
+
+    if ([defaultPlayer isPlaying]) {
+        player = defaultPlayer;
     } else {
-        TBRdioPlayer *rdio = [[TBRdioPlayer alloc] init];
-        
-        if ([rdio isPlaying]) {
-            player = rdio;
-        } else {
-            player = iTunes;
+        // iterate over the remaining players
+        NSEnumerator *enumerator = [_playerData keyEnumerator];
+        NSString *playerName;
+        id <TBPlayerDelegate> alternativePlayer;
+
+        while ((playerName = [enumerator nextObject]) && player == nil) {
+
+            if (playerName != _defaultPlayer) {
+
+                alternativePlayer = [self getInstanceForPlayer:playerName];
+                if ([alternativePlayer isPlaying]) {
+                    player = alternativePlayer;
+                }
+
+            }
+
         }
     }
     
@@ -89,23 +103,40 @@
 }
 
 - (id)getCurrentPlayerByNotification:(NSNotification *)notification {
-    id player;
-    
-    if ([notification.name isEqualToString:[_playerNotificationNames objectForKey:@"iTunes"]]
-        && ![[self currentPlayer] isKindOfClass:[TBiTunesPlayer class]]) {
+    return [self getInstanceForPlayer:[self getPlayerNameByNotification:notification]];
+}
 
-        player = [[TBiTunesPlayer alloc] init];
-        
-    } else if ([notification.name isEqualToString:[_playerNotificationNames objectForKey:@"Rdio"]]
-               && ![[self currentPlayer] isKindOfClass:[TBRdioPlayer class]]) {
+#pragma mark -
+#pragma mark Player data
 
-        player = [[TBRdioPlayer alloc] init];
+- (NSString *)bundleIdentifierForPlayer:(NSString *)playerName {
+    return [[_playerData objectForKey:playerName] objectForKey:@"bundleIdentifier"];
+}
+
+- (NSString *)notificationNameForPlayer:(NSString *)playerName {
+    return [[_playerData objectForKey:playerName] objectForKey:@"notificationName"];
+}
+
+- (NSString *)getPlayerNameByNotification:(NSNotification *)notification {
+    NSString *playerName;
+
+    for (NSString *player in _playerData) {
+        NSString *notificationName = [[_playerData objectForKey:player] objectForKey:@"notificationName"];
         
-    } else {
-        player = _currentPlayer;
+        if ([notificationName isEqualToString:notification.name]) {
+            playerName = player;
+        }
     }
     
-    return player;
+    return playerName;
+}
+
+- (id)getInstanceForPlayer:(NSString *)playerName {
+    Class playerClass = NSClassFromString([[_playerData objectForKey:playerName] objectForKey:@"className"]);
+    id <TBPlayerDelegate> playerInstance = [[playerClass alloc] initWithBundleIdentifier:
+                                            [self bundleIdentifierForPlayer:playerName]];
+
+    return playerInstance;
 }
 
 @end

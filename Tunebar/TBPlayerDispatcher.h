@@ -5,7 +5,8 @@
 
 @interface TBPlayerDispatcher : NSObject {
     id <TBPlayerDelegate> _currentPlayer;
-    NSDictionary *_playerNotificationNames;
+    NSDictionary *_playerData;
+    NSString *_defaultPlayer;
 }
 
 - (void)registerForNotificationWithObserver:(id)observer selector:(SEL)selector;
