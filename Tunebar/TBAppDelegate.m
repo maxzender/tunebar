@@ -46,7 +46,7 @@
                                              selector:@selector(popoverDidResignKey:)
                                                  name:NSWindowDidResignKeyNotification
                                                object:nil];
-    [_playerController registerForNotificationWithObserver:_popoverController
+    [_playerDispatcher registerForNotificationWithObserver:_popoverController
                                                 selector:@selector(playerStateChanged:)];
 }
 
@@ -57,9 +57,9 @@
 
 - (TBPopoverWindowController *)popoverController {
     if (_popoverController == nil) {
-        _playerController = [[TBPlayerDispatcher alloc] init];
+        _playerDispatcher = [[TBPlayerDispatcher alloc] init];
         _popoverController = [[TBPopoverWindowController alloc] initWithStatusItem:_statusItem
-                                                                    playerDelegate:_playerController];
+                                                                    playerDelegate:_playerDispatcher];
         [self registerNotifications];
     }
     

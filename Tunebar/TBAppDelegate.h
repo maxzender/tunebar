@@ -4,7 +4,7 @@
 
 @interface TBAppDelegate : NSObject <NSApplicationDelegate, TBStatusItemViewDelegate> {
     TBPopoverWindowController *_popoverController;
-    TBPlayerDispatcher *_playerController;
+    TBPlayerDispatcher *_playerDispatcher;
 }
 
 @property (nonatomic, strong, readonly) TBPopoverWindowController *popoverController;
