@@ -8,7 +8,7 @@
     if (self) {
         _iTunes = [SBApplication applicationWithBundleIdentifier:bundleIdentifier];
     }
-    
+
     return self;
 }
 
@@ -33,7 +33,7 @@
     if ([_iTunes isRunning]) {
         isPlaying = _iTunes.playerState == iTunesEPlSPlaying;
     }
-    
+
     return isPlaying;
 }
 
@@ -42,7 +42,7 @@
     if ([_iTunes isRunning]) {
         currentTrackName = _iTunes.currentTrack.name;
     }
-    
+
     return currentTrackName;
 }
 
@@ -51,7 +51,7 @@
     if ([_iTunes isRunning]) {
         currentAlbum = _iTunes.currentTrack.album;
     }
-    
+
     return currentAlbum;
 }
 
@@ -60,13 +60,13 @@
     if ([_iTunes isRunning]) {
         currentArtist = _iTunes.currentTrack.artist;
     }
-    
+
     return currentArtist;
 }
 
 - (NSImage *)getArtwork {
     NSImage *artwork = [NSImage imageNamed:@"artwork_default"];
-    
+
     if ([_iTunes isRunning]) {
         SBElementArray *iTunesArtworks = _iTunes.currentTrack.artworks;
         if ([iTunesArtworks count] > 0) {

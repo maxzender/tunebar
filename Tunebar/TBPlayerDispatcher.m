@@ -99,11 +99,25 @@
         }
     }
     
+    if (player == nil) {
+        player = defaultPlayer;
+    }
+
     return player;
 }
 
 - (id)getCurrentPlayerByNotification:(NSNotification *)notification {
-    return [self getInstanceForPlayer:[self getPlayerNameByNotification:notification]];
+    id player;
+    NSString *currentPlayerName = [self getPlayerNameByProperty:@"className" value:NSStringFromClass([_currentPlayer class])];
+    NSString *notificationSenderName = [self getPlayerNameByProperty:@"notificationName" value:notification.name];
+
+    if ([currentPlayerName isEqualToString:notificationSenderName]) {
+        player = _currentPlayer;
+    } else {
+        player = [self getInstanceForPlayer:notificationSenderName];
+    }
+
+    return player;
 }
 
 #pragma mark -
@@ -117,17 +131,17 @@
     return [[_playerData objectForKey:playerName] objectForKey:@"notificationName"];
 }
 
-- (NSString *)getPlayerNameByNotification:(NSNotification *)notification {
+- (NSString *)getPlayerNameByProperty:(NSString *)propertyName value:(NSString *)value {
     NSString *playerName;
 
     for (NSString *player in _playerData) {
-        NSString *notificationName = [[_playerData objectForKey:player] objectForKey:@"notificationName"];
+        NSString *notificationName = [[_playerData objectForKey:player] objectForKey:propertyName];
         
-        if ([notificationName isEqualToString:notification.name]) {
+        if ([notificationName isEqualToString:value]) {
             playerName = player;
         }
     }
-    
+
     return playerName;
 }
 

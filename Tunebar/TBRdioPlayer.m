@@ -8,7 +8,7 @@
     if (self) {
         _rdio = [SBApplication applicationWithBundleIdentifier:bundleIdentifier];
     }
-    
+
     return self;
 }
 
@@ -33,7 +33,7 @@
     if ([_rdio isRunning]) {
         isPlaying = _rdio.playerState == RdioEPSSPlaying;
     }
-    
+
     return isPlaying;
 }
 
@@ -42,7 +42,7 @@
     if ([_rdio isRunning]) {
         currentTrackName = _rdio.currentTrack.name;
     }
-    
+
     return currentTrackName;
 }
 
@@ -51,7 +51,7 @@
     if ([_rdio isRunning]) {
         currentAlbum = _rdio.currentTrack.album;
     }
-    
+
     return currentAlbum;
 }
 
@@ -60,7 +60,7 @@
     if ([_rdio isRunning]) {
         currentArtist = _rdio.currentTrack.artist;
     }
-    
+
     return currentArtist;
 }
 
@@ -70,7 +70,7 @@
     if ([_rdio isRunning]) {
         artwork = _rdio.currentTrack.artwork;
     }
-    
+
     return artwork;
 }
 
@@ -83,7 +83,7 @@
             progress = playerPosition / 100;
         }
     }
-    
+
     return progress;
 }
 

@@ -11,6 +11,7 @@
 		77212508158A45BA00B3746E /* TBProgressBarImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77212507158A45BA00B3746E /* TBProgressBarImageView.m */; };
 		7721250A158A490000B3746E /* progress_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 77212509158A490000B3746E /* progress_bar.png */; };
 		7722D7AE158F20470047AF07 /* window_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 7722D7AD158F20470047AF07 /* window_background.png */; };
+		772FB8C71623272900DAAC75 /* TBSpotifyPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 772FB8C61623272900DAAC75 /* TBSpotifyPlayer.m */; };
 		7739C4881588B39300479998 /* artwork_overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 7739C47B1588B39200479998 /* artwork_overlay.png */; };
 		7739C4891588B39300479998 /* control_overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 7739C47C1588B39200479998 /* control_overlay.png */; };
 		7739C48A1588B39300479998 /* next_button_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 7739C47D1588B39200479998 /* next_button_active.png */; };
@@ -57,6 +58,8 @@
 		77212507158A45BA00B3746E /* TBProgressBarImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBProgressBarImageView.m; sourceTree = "<group>"; };
 		77212509158A490000B3746E /* progress_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = progress_bar.png; sourceTree = "<group>"; };
 		7722D7AD158F20470047AF07 /* window_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = window_background.png; sourceTree = "<group>"; };
+		772FB8C51623272900DAAC75 /* TBSpotifyPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBSpotifyPlayer.h; sourceTree = "<group>"; };
+		772FB8C61623272900DAAC75 /* TBSpotifyPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBSpotifyPlayer.m; sourceTree = "<group>"; };
 		7739C47B1588B39200479998 /* artwork_overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = artwork_overlay.png; sourceTree = "<group>"; };
 		7739C47C1588B39200479998 /* control_overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = control_overlay.png; sourceTree = "<group>"; };
 		7739C47D1588B39200479998 /* next_button_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next_button_active.png; sourceTree = "<group>"; };
@@ -140,6 +143,8 @@
 				777DB785157F724D00D16FDD /* TBiTunesPlayer.m */,
 				77F80E92161EBFDE008E46BA /* TBRdioPlayer.h */,
 				77F80E93161EBFDE008E46BA /* TBRdioPlayer.m */,
+				772FB8C51623272900DAAC75 /* TBSpotifyPlayer.h */,
+				772FB8C61623272900DAAC75 /* TBSpotifyPlayer.m */,
 			);
 			name = Players;
 			sourceTree = "<group>";
@@ -410,6 +415,7 @@
 				77212508158A45BA00B3746E /* TBProgressBarImageView.m in Sources */,
 				77F56A55160CB1F700736933 /* TBPlayerDispatcher.m in Sources */,
 				77F80E94161EBFDE008E46BA /* TBRdioPlayer.m in Sources */,
+				772FB8C71623272900DAAC75 /* TBSpotifyPlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
