@@ -11,7 +11,7 @@
         _playerData = [playerInfo objectForKey:@"SupportedPlayers"];
         _defaultPlayer = [playerInfo objectForKey:@"DefaultPlayer"];
 
-        [self registerNotifications];
+        [self registerPlayerNotifications];
     }
     
     return self;
@@ -33,16 +33,16 @@
 #pragma mark -
 #pragma mark Player notifications
 
-- (void)registerNotifications {
+- (void)registerPlayerNotifications {
     for (NSString *playerName in _playerData) {
-        [self registerNotificationForName:[self notificationNameForPlayer:playerName]];
+        [self registerNotificationForPlayer:[self notificationNameForPlayer:playerName]];
     }
 }
 
-- (void)registerNotificationForName:(NSString *)name {
+- (void)registerNotificationForPlayer:(NSString *)playerName {
     [[NSDistributedNotificationCenter defaultCenter] addObserver:self
                                                         selector:@selector(playerStateChanged:)
-                                                            name:name
+                                                            name:playerName
                                                           object:nil];
 }
 
