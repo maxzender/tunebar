@@ -30,11 +30,28 @@
     [self postPlayerStateChangedNotification];
 }
 
+- (void)appDidTerminate:(NSNotification *)notification {
+    NSString *currentBundleIdentifier = [self bundleIdentifierForPlayer:[self getCurrentPlayerName]];
+
+    // check if the terminated app was our current player
+    if ([[notification.userInfo objectForKey:@"NSApplicationBundleIdentifier"] isEqualToString:currentBundleIdentifier]) {
+        // if so, determine a new player
+        _currentPlayer = [self getCurrentPlayer];
+        [self postPlayerStateChangedNotification];
+    }
+}
+
 #pragma mark -
 #pragma mark Player notifications
 
 - (void)registerPlayerNotifications {
+    [[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self
+                                                           selector:@selector(appDidTerminate:)
+                                                               name:@"NSWorkspaceDidTerminateApplicationNotification"
+                                                             object:nil];
+
     for (NSString *playerName in _playerData) {
+        // register for notifications sent by the players
         [self registerNotificationForPlayer:[self notificationNameForPlayer:playerName]];
     }
 }
@@ -106,7 +123,7 @@
 
 - (id)getCurrentPlayerByNotification:(NSNotification *)notification {
     id player;
-    NSString *currentPlayerName = [self getPlayerNameByProperty:@"className" value:NSStringFromClass([_currentPlayer class])];
+    NSString *currentPlayerName = [self getCurrentPlayerName];
     NSString *notificationSenderName = [self getPlayerNameByProperty:@"notificationName" value:notification.name];
 
     if ([currentPlayerName isEqualToString:notificationSenderName]) {
@@ -141,6 +158,10 @@
     }
 
     return playerName;
+}
+
+- (NSString *)getCurrentPlayerName {
+    return [self getPlayerNameByProperty:@"className" value:NSStringFromClass([_currentPlayer class])];
 }
 
 - (id)getInstanceForPlayer:(NSString *)playerName {
