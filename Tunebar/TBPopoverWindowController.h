@@ -6,7 +6,7 @@
 #define PROGRESS_BAR_X 112
 #define PROGRESS_BAR_Y 14
 #define PROGRESS_BAR_HEIGHT 8.0
-#define SCROLL_SPEED 0.09
+#define SCROLL_SPEED 0.05
 #define ARROW_POSITION -102.0
 
 @class TBArtworkImageView, TBPreferencesWindowController, TBProgressBarView, TBScrollTextView;
